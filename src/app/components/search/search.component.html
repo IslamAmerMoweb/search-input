@@ -1,0 +1,11 @@
+<main class="container mt-5">
+    <form>
+        <label class="mb-3">Search</label>
+        <input type="text" class="form-control" #box (keyup)="search(box.value)">
+    </form>
+    <div class="mt-5" *ngFor="let post of words">
+        <h3>{{post.id}}</h3>
+        <h4>{{post.title}}</h4>
+        <p>{{post.body}}</p>
+    </div>
+</main>
